@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medex</title>
+    <link rel="shortcut icon" type ="image" href="android.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="topnav">
+  <a href="#home" class="active" ><h2>Medex</h2></a>
+  
+  <div id="myLinks">
+    <ul class="mob-menu">
+      <li><a href="Index.html" class="active">HOME</a></li>
+      <li class="service">
+        <a href="services.html" >SERVICES</a>
+        <button onclick="drop()"><i class="arrow down"></i></button>
+      </li>
+      <div id="dropdown">
+        <li><a href="Expired.html">Expired compensation</a></li>
+        <li><a href="stagnant.html">Stagnant exchange</a></li>
+        <li><a href="orders.html">Collected orders</a></li>
+        <li><a href="offers.html">special offers</a></li>
+      </div>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="jobs.html">JOBS</a></li>
+    </ul>
+  </div>
+  
+  <a href="javascript:void(0);" class="mob-icon" onclick="menu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+  
+
+
+    <header>
+        <div class="container-fluid" id="navbar">
+          <h2 class="logo">MEDEX</h2>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li>
+                  <a href="services.html">SERVICES ▼</a>
+                  <ul class="dropdown">
+                    <li><a href="Expired.html">Expired compensation</a></li>
+                    <li><a href="stagnant.html">Stagnant exchange</a></li>
+                    <li><a href="orders.html">Collected orders</a></li>
+                    <li><a href="offers.html">special offers</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="jobs.html">JOBS</a></li>
+                <li class="except"><a href=""> <button class="logbutt">Sign in</button></a></li>
+
+                <!-- 
+                <li class="except"><input type="text" placeholder="Search..." id="searchbox"></li>
+                <li class="except"><img onclick="search()" class="search-icon" width="25px" 
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAy
+                  CAYAAAAeP4ixAAAACXBIWXMAAAsTAAAL
+                  EwEAmpwYAAAChklEQVR4nO2Zu24TQRSGPxeEl
+                  gYbEVIYHoECCJdXQAIH+YKECA+AxEVESAl0wAsgUUEKpCii
+                  IDFKDYGGS96AhhZSBZGQ2MFwpH+lKQxi8czYu+wnjbTy5f/3jPecOTO
+                  GgoKR5AAwDcwDa8A6sKPxBfig9y4DFUaQM0Ab6AC9vxz22WXgNCPAEWDFubk
+                  u8Aq4BhwDysAeDbs+DlwHVvXZ5HsvgMPDCqIFfNWNfAPuAftTfN8Cuw9sSmMDaB
+                  CZOWc2F4DxAbQOAYuO3iyRuCvDH7ouedK9CuzGCqYlIzOsBdCfcoKpEzCxk5y4FcoEmH
+                  FyphrCYMXJiZCUnJxph1gneqowE4RnXJWwB5zyKdyWqJXYWFhpNs8ln21HRwtYmnViUGyd6a
+                  q9seuBuaKZeUl8Xsv7kg+xeYlZ2xGbG/J+7ENsTWLWO8VmUt7vfIitSyxmfiRU5P3Zh9i2xMa
+                  Iz155f89LIBt5ebQ++kx22xTF5qS8rQznovw+8iE2LTHbnsbmjbzP
+                  +XpOkxbFS6uQskXpAPt8iS5rZqyRi8UDeVpL740TEt0aQht/1Ld425k
+                  hX/v0fpj2M3k9D2FQ1cLU03Y0FLflYSeTB0OZNJzDBzso8M0F5/DhLIGZd
+                  YKZ8fSYlfRLJEHs6sSGWMEkOWOHbP/KhJMT7rDS2yQCdSdnNlWa06wzZZXYL
+                  acx7PYJpkEEqk41S4xX1VpMajEd06jotZvqndybXlBiN4cZDDqyWUr5t4JtD572a
+                  UZ/F0ydiJR1UPAEeK8Suq3F7RPwFniom/rTtqAxCsH4wsp7p08wF8lRMC0yyFSegq
+                  n9D8E0yWgwO0UwGSkAc2SU885jdoeMU4v5d3ZBwa8Z+Ak4rhMJLuUtjQAAAABJRU5ErkJggg=="></li>
+                 -->
+                
+            </ul>
+           
+        </div>
+    </header>
+    <br>
+    <h1 class="home-header">HOME</h1>
+    <br><br><br>
+
+    <div id="carouselExampleCaptions" class="carousel slide container">
+      <div class="carousel-indicators">
+          
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      
+          <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+              <img src="expired slide pro.jpg" class="d-block w-100 c-img" alt="Slide 1">
+              <div class="carousel-caption top-0 mt-4">
+                <p class="mt-5 fs-3 text-uppercase">Expired Compensation</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Now At our Application</h1>
+                <a href="Expired.html" target="_blank"><button class="px-4 py-2 fs-5 mt-5 slide-butt" data-bs-toggle="modal"
+                  data-bs-target="#booking-modal">More Details</button></a>
+              </div>
+            </div>
+            <div class="carousel-item c-item">
+              <img src="stagant slide.jpg" class="d-block w-100 c-img" alt="Slide 2">
+              <div class="carousel-caption top-0 mt-4">
+                <p class="text-uppercase fs-3 mt-5">Stagnant Exchange</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Now At our Application</p>
+                <a href="stagnant.html" target="_blank"><button class="px-4 py-2 fs-5 mt-5 slide-butt" data-bs-toggle="modal"
+                  data-bs-target="#booking-modal">More Details</button></a>
+              </div>
+            </div>
+            <div class="carousel-item c-item">
+              <img src="collcted orders slide.jpg" class="d-block w-100 c-img" alt="Slide 3">
+              <div class="carousel-caption top-0 mt-4">
+                <p class="text-uppercase fs-3 mt-5">Collected Orders</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Now At our Application</p>
+                <a href="orders.html" target="_blank"><button class="px-4 py-2 fs-5 mt-5 slide-butt" data-bs-toggle="modal"
+                  data-bs-target="#booking-modal">More Details</button></a>
+              </div>
+            </div>
+  
+            <div class="carousel-item c-item">
+              <img src="offers slide.jpg" class="d-block w-100 c-img" alt="Slide 4">
+              <div class="carousel-caption top-0 mt-4">
+                <p class="text-uppercase fs-3 mt-5">Special Offers</p>
+                <h1 class="display-1 fw-bolder text-capitalize">Now At our Application</p>
+                <a href="offers.html" target="_blank"><button class=" px-4 py-2 fs-5 mt-5 slide-butt" data-bs-toggle="modal"
+                  data-bs-target="#booking-modal">More Details</button></a>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      
+
+      <br><br><br><br><br>
+
+      <div class="container">
+        <h1 class="Download-head">Download MEDEX App now for free, and manage all your services.</h1>
+        <br>
+        <div class="row">
+
+          <div class="col-sm-8">
+
+            <p class="download-pragraph">An Egyptian shareholding company.. 
+              established by a group of pharmacists and administration experts,<br>
+              supporting the pharmacy economics and accelerating its capital cycle,<br>
+              through the first logistics network working directly In the field using <br>
+              The system offers many smart solutions stopping or reducing the pharmacy <br>
+              cash losses, beside increasing profits as built for, <br> in order to 
+              support medium and small pharmacies facing the most <br> 
+              important and major entities
+              in the pharmaceutical market <br>
+               and to find all business needed services in one place in a very easy usage.
+            </p>
+
+          </div>
+          <div class="col-sm-4 text-center">
+
+            <h3 class="download-title">Find us on play store</h3>
+            <br><br>
+           <div class="center">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.devlives.medex&pcampaignid=web_share">
+              <img  src="android.png" alt="android-os">
+            </a>
+           </div>
+            
+
+          </div>
+        </div>
+      </div>
+      <br><br><br>
+
+
+      <div class="container event-bg">
+         <h3>New Cairo Event</h3>
+        <h1>Join now our event in New Cairo</h1>
+        
+        <ul>
+          <li><a href="register.html"><button class="event-butt">Register</button></a></li>
+          <li><a href=""><button class="event-butt">More Details...</button></a></li>
+        </ul>
+      </div>
+
+      <br><br><br><br><br><br>
+
+
+      
+
+      
+      
+
+      
+
+        <div class="container-fluid foot">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+              <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+              <p class="text-body-secondary">© MedexEgypt</p>
+            </div>
+        
+            <div class="col mb-3">
+        
+            </div>
+        
+            <div class="col mb-3">
+              <h5>information</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Adress</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Phone</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">E-mail</a></li>
+              </ul>
+            </div>
+        
+            <div class="col mb-3">
+              <h5>places</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">place</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">palce</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">place</a></li>
+              
+              </ul>
+            </div>
+        
+            <div class="col mb-3">
+              <h5>Place</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PLace</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PLace</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PLace</a></li>
+              </ul>
+            </div>
+          </footer>
+        </div>
+    
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/swiped-events.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

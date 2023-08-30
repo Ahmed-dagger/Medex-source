@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medex</title>
+    <link rel="shortcut icon" type ="image" href="android.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    body
+    {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    @media (max-width: 1000px) 
+    { 
+      #navbar
+      {
+          display:none;
+      }
+      
+    }
+    @media (min-width: 999px) 
+    { 
+      .topnav
+      {
+          display:none;
+      }
+      ul li:hover ul.dropdown
+    {
+      display: block;
+    
+    }  
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #ffffff;
+      position: relative;
+      transition: 0.3s;
+    }
+    
+    
+     #myLinks {
+      display: none;
+      transition: 0.3s;
+      
+    }
+    .mob-menu
+    {
+      list-style: none;
+      transition: 0.3s;
+    }
+    .mob-menu li a
+    {
+      color: red;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+      list-style: none;
+      transition: 0.3s;
+      font-weight: 700;
+    }
+
+    .mob-menu li a:hover
+    {
+      background-color: #ffffff;
+      color: rgb(165, 0, 0);
+    }
+    
+   
+    
+    
+    
+    .mob-icon {
+      background: black;
+      color: white;
+      transition: 0.3s;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    
+    .mob-icon:hover {
+      background-color: #ffffff;
+      color: black;
+    }
+    
+    
+    .active {
+      background-color: #ffffff;
+      color: rgb(224, 0, 0);
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+      
+    }
+    .active h2
+    {
+      font-weight: 700;
+    }
+    .active:hover
+    {
+      background-color: #ffffff;
+      color: rgb(165, 0, 0);
+    }
+    
+
+    header
+    {
+        background-color: rgb(255, 255, 255);
+        border: none;
+        box-sizing: border-box;
+        
+        
+        
+    }
+
+    .logo
+    {
+        color: red;
+        font-weight: 700;
+        position: relative;
+        top: 38px;
+        left: 40px;
+        
+
+    }
+    header ul
+    {
+        
+        display: flex;
+        list-style: none;
+        text-align: left;
+        justify-content: center;
+        margin-bottom: 15px;
+        
+        
+        
+    }
+    header ul li
+    {
+        padding: 20px;
+        position: relative;
+        bottom: 15px;
+        
+        
+        
+        
+        
+    }
+     ul li .dropdown li
+    {
+      display: block;
+      transition: 0.3s;
+      padding-bottom: 15px;
+      position: relative;
+      top: 15px;
+      
+    }
+    ul li .dropdown
+    {
+      width: 250px;
+      background-color: white;
+      position: absolute;
+      top: 70px;
+      z-index: 999;
+      display: none;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+      height: 280px;
+      border-radius: 5px;
+
+    }
+    
+    header ul li a
+    {
+        text-decoration: none;
+        color: black;
+        font-size: small;
+        transition: 0.3s;
+        font-weight: 700;
+    }
+    header ul li a:hover
+    {
+        color: red;
+        
+    }
+    header ul li:hover
+    {
+        border: none;
+    }
+    header ul li:not(.except,.dropdown li):hover
+    {
+      border-bottom: solid 4px;
+      border-color: red;
+    }
+    .home-header
+    {
+      text-align: center;
+      color: red;
+      font-weight: 700;
+
+    }
+
+    .searchbox
+    {
+      height: 30px;
+      display: none;
+    }
+    .searchbox:active:focus
+    {
+      outline: none;
+    }
+    .search-icon:active .searchbox
+    {
+      display: block;
+    }
+    .logbutt
+    {
+      background-color: red;
+      color: white;
+      border: none;
+      width: 70px;
+      height: 30px;
+      float: right;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+    .logbutt:hover
+    {
+      background-color: rgb(153, 0, 0);
+    }
+    .foot
+    {
+      background-color: rgb(204, 204, 204);
+      padding-bottom: 20px;
+      
+    }
+
+</style>
+
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  <div class="topnav">
+    <a href="#home" class="active" ><h2>Medex</h2></a>
+    
+    <div id="myLinks">
+      <ul class="mob-menu">
+        <li><a href="Index.html">HOME</a></li>
+        <li>
+          <a href="services.html" >SERVICES </a>
+          <ul id="menu" class="dropdown">
+            <li><a href="Expired.html">Expired compensation</a></li>
+            <li><a href="stagnant.html">Stagnant exchange</a></li>
+            <li><a href="orders.html">Collected orders</a></li>
+            <li><a href="offers.html">special offers</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="jobs.html">JOBS</a></li>
+      </ul>
+    </div>
+    
+    <a href="javascript:void(0);" class="mob-icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+    
+  
+  
+      <header>
+          <div class="container-fluid" id="navbar">
+            <h2 class="logo">MEDEX</h2>
+            <ul>
+                <li><a href="Index.html">HOME</a></li>
+                <li>
+                  <a href="services.html">SERVICES ▼</a>
+                  <ul class="dropdown">
+                    <li><a href="Expired.html">Expired compensation</a></li>
+                    <li><a href="stagnant.html">Stagnant exchange</a></li>
+                    <li><a href="orders.html">Collected orders</a></li>
+                    <li><a href="offers.html">special offers</a></li>
+                  </ul>
+                </li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="jobs.html">JOBS</a></li>
+                  <li class="except"><a href=""> <button class="logbutt">Sign in</button></a></li>
+                  <li class="except"><input type="text" placeholder="Search..." class="searchbox"></li>
+                  <li class="except"><img class="search-icon" width="25px" 
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAy
+                    CAYAAAAeP4ixAAAACXBIWXMAAAsTAAAL
+                    EwEAmpwYAAAChklEQVR4nO2Zu24TQRSGPxeEl
+                    gYbEVIYHoECCJdXQAIH+YKECA+AxEVESAl0wAsgUUEKpCii
+                    IDFKDYGGS96AhhZSBZGQ2MFwpH+lKQxi8czYu+wnjbTy5f/3jPecOTO
+                    GgoKR5AAwDcwDa8A6sKPxBfig9y4DFUaQM0Ab6AC9vxz22WXgNCPAEWDFubk
+                    u8Aq4BhwDysAeDbs+DlwHVvXZ5HsvgMPDCqIFfNWNfAPuAftTfN8Cuw9sSmMDaB
+                    CZOWc2F4DxAbQOAYuO3iyRuCvDH7ouedK9CuzGCqYlIzOsBdCfcoKpEzCxk5y4FcoEmH
+                    FyphrCYMXJiZCUnJxph1gneqowE4RnXJWwB5zyKdyWqJXYWFhpNs8ln21HRwtYmnViUGyd6a
+                    q9seuBuaKZeUl8Xsv7kg+xeYlZ2xGbG/J+7ENsTWLWO8VmUt7vfIitSyxmfiRU5P3Zh9i2xMa
+                    Iz155f89LIBt5ebQ++kx22xTF5qS8rQznovw+8iE2LTHbnsbmjbzP
+                    +XpOkxbFS6uQskXpAPt8iS5rZqyRi8UDeVpL740TEt0aQht/1Ld425k
+                    hX/v0fpj2M3k9D2FQ1cLU03Y0FLflYSeTB0OZNJzDBzso8M0F5/DhLIGZd
+                    YKZ8fSYlfRLJEHs6sSGWMEkOWOHbP/KhJMT7rDS2yQCdSdnNlWa06wzZZXYL
+                    acx7PYJpkEEqk41S4xX1VpMajEd06jotZvqndybXlBiN4cZDDqyWUr5t4JtD572a
+                    UZ/F0ydiJR1UPAEeK8Suq3F7RPwFniom/rTtqAxCsH4wsp7p08wF8lRMC0yyFSegq
+                    n9D8E0yWgwO0UwGSkAc2SU885jdoeMU4v5d3ZBwa8Z+Ak4rhMJLuUtjQAAAABJRU5ErkJggg=="></li>
+              </ul>
+             
+          </div>
+      </header>
+
+
+      <h1 class="home-header">Special Offers</h1>
+
+
+
+      <div class="container-fluid foot">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+          <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <p class="text-body-secondary">© MedexEgypt</p>
+          </div>
+      
+          <div class="col mb-3">
+      
+          </div>
+      
+          <div class="col mb-3">
+            <h5>information</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Adress</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Phone</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">E-mail</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>places</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">place</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">palce</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">place</a></li>
+            
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Place</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PLace</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PLace</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">PLace</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+  
+
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="../node_modules/bootstrap/dist/js/swiped-events.min.js"></script>
+<script>
+  function myFunction() 
+  {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") 
+    {
+      x.style.display = "none";
+    } 
+    else
+    {
+      x.style.display = "block";
+    }
+  }
+  function drop_down()
+  {
+    var x = document.getElementById("menu");
+    if (x.style.display === "block") 
+    {
+      x.style.display = "none";
+    } 
+    else
+    {
+      x.style.display = "block";
+    }
+  }
+</script>
+
+    </body>
